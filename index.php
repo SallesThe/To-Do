@@ -1,5 +1,8 @@
+<?php 
+    include './includes/version.php';
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,25 +14,25 @@
     
     <main class="main-container">
         
-        <form action="" class="form-content">
+        <form action="index.php" class="form-content">
             
             <h1>LOGIN</h1>
 
             <label for="email" class="form-label">Email: </label>
-            <input type="email" class="form-control form-input" name="email">
+            <input type="email" placeholder="Informe seu email" class="form-control form-input" name="email">
             
             <label for="password" class="form-label">Senha: </label>
-            <input type="password" class="form-control form-input" name="password" id="password">
+            <input type="password" placeholder="Informe sua senha " class="form-control form-input" name="password" id="password">
             
             <div class="action-buttons">
                 <input type="submit" class="form-control btn btn-success btn-submit" value="ENTRAR" name="submit">
-                <a href="./pages/register.html" class="btn-register form-control btn btn-primary">Cadastre-se</a>
+                <a href="./pages/register.php" class="btn-register form-control btn btn-primary">Cadastre-se</a>
             </div>
             
         </form>
         
         <footer>
-            <p>Version 1.0.0</p>
+            <p>Version <?php echo $version; ?> </p>
         </footer>
     </main>
     

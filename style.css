@@ -30,6 +30,12 @@ body {
 
 .form-content .form-input {
     background: none;
+    color: #CCBCBC;
+}
+
+.form-content .form-input::placeholder {
+    color: #CCBCBC;
+    opacity: .4;
 }
 
 .form-content h1 {

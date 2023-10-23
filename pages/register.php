@@ -1,3 +1,6 @@
+<?php 
+    include '../includes/version.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,28 +14,28 @@
     
     <main class="main-container">
         
-        <form action="" class="form-content">
+        <form action="register.php" class="form-content">
             
             <h1>LOGIN</h1>
 
             <label for="email" class="form-label">Email: </label>
-            <input type="email" class="form-control" name="email">
+            <input type="email" placeholder="Insira aqui seu email" class="form-control form-input" name="email">
             
             <label for="password" class="form-label">Senha: </label>
-            <input type="password" class="form-control" name="password" id="password">
+            <input type="password" placeholder="Insira aqui sua senha" class="form-control form-input" name="password" id="password">
 
             <label for="confirm-password" class="form-label">Confirme a Senha: </label>
-            <input type="password" class="form-control" name="confirm-password" id="password">
+            <input type="password" placeholder="Confirme sua senha" class="form-control form-input" name="confirm-password" id="password">
             
             <div class="action-buttons">
                 <input type="submit" class="form-control btn btn-success btn-submit" value="CADASTRAR" name="submit">
-                <a href="../index.html" class="btn-register form-control btn btn-primary">Já possuo conta</a>
+                <a href="../index.php" class="btn-register form-control btn btn-primary">Já possuo conta</a>
             </div>
             
         </form>
 
         <footer>
-            <p>Version 1.0.0</p>
+            <p>Version <?php echo $version; ?> </p>
         </footer>
     </main>
 

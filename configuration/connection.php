@@ -9,7 +9,6 @@
         {
             try {
                 $conn = new PDO("mysql:host=$this->server_name;dbname=$this->db_name", $this->user_name, $this->password);
-                echo "Success";
             } catch (Exception $e) {
                 echo "Error: " . $e->getMessage();
             }

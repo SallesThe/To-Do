@@ -17,7 +17,18 @@
                 'action' => 'login'
             );
 
-            return $routes;
+            $routes['register'] = array(
+                'route' => '/register',
+                'controller' => 'indexController',
+                'action' => 'register'
+            );
+
+            return $this->setRoutes($routes);
+        }
+
+        public function setRoutes($routes)
+        {
+            $this->routes = $routes;
         }
 
 

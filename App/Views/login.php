@@ -33,7 +33,7 @@
         </form>
         
         <footer>
-            <p>Version <?php echo $version; ?> </p>
+            
         </footer>
     </main>
     

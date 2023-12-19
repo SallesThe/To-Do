@@ -2,7 +2,7 @@
     namespace App;
     class Connection
     {
-        public function Connect(): \PDO
+        public static function Connect(): \PDO
         {
             try {
                 $conn = new \PDO("mysql:host=localhost;dbname=mvc", "root", "");

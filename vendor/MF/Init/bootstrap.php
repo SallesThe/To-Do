@@ -23,9 +23,6 @@
 
         protected function run($requestURI)
         {
-            echo "<pre>";
-            var_dump($this->routes);
-            echo "</pre>";
             foreach ($this->getRoutes() as $path => $route) 
             {
                 if($requestURI == $route['route'])
@@ -34,9 +31,6 @@
                     $controller = new $class;
                     $action = $route['action'];
                     $controller->$action();
-                } else {
-
-                    die("O requestUri é diferente do " . $route['route']);
                 }
             }
         }

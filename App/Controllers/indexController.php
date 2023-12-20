@@ -4,7 +4,6 @@
     use MF\Controller\Action;
 
     // * Resources from Models
-    use App\Models\User;
     use MF\Model\Container;
 
     class indexController extends Action 
@@ -13,6 +12,7 @@
         {
             $user = Container::getModel('user');
             $users = $user->getUser();
+            $this->view->date = $users;
             $this->render('login');
         }
 

@@ -7,7 +7,8 @@
         public function getUser(): array
         {
             $query = "SELECT * FROM tb_produtos";
-            return $this->database->query($query)->fetchAll();
+            $res = $this->database->query($query)->fetchAll();
+            return $res;
         }
     }
 ?>

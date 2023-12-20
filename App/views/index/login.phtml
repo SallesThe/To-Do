@@ -7,5 +7,13 @@
 </head>
 <body>
     <h1>Login</h1>
+    <?php
+        $dados = $this->view->date;
+        var_dump($dados);
+        foreach ($this->view->date as $key => $date) 
+        {
+            echo $date . "<br>";
+        }
+    ?>
 </body>
 </html>

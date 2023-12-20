@@ -1,10 +1,18 @@
 <?php 
     namespace App\Controllers;
+    // * Resources from miniFramework
     use MF\Controller\Action;
+
+    // * Resources from Models
+    use App\Models\User;
+    use MF\Model\Container;
+
     class indexController extends Action 
-    {       
+    {
         public function login(): void
         {
+            $user = Container::getModel('user');
+            $users = $user->getUser();
             $this->render('login');
         }
 

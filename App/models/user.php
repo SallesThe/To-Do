@@ -1,20 +1,13 @@
 <?php 
     namespace App\Models;
-    use App\Connection;
-    class User
+    use MF\Model\Model;
+
+    class User extends Model
     {
-        private $data;
-
-        public function __construct()
+        public function getUser(): array
         {
-            
-        }
-
-        public function selectData($query): array
-        {
-            $str = Connection::Connect();
-            $str->query($query);
-            return array();
+            $query = "SELECT * FROM tb_produtos";
+            return $this->database->query($query)->fetchAll();
         }
     }
 ?>

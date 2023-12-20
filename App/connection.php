@@ -8,7 +8,7 @@
                 $conn = new \PDO("mysql:host=localhost;dbname=mvc", "root", "");
                 return $conn;
             } catch (\PDOException $e) {
-                echo "Error" . $e->getMessage();
+                echo "Error: " . $e->getMessage();
             }
         }
     }
